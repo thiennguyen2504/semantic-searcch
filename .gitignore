@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment & Virtual environments
+.env
+venv/
+.venv/
+env/
+ENV/
+
+# Data & Models cache
+data/*
+!data/.gitkeep
+.cache/
+huggingface/
+
+# IDE & Editor
+.vscode/
+.idea/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/

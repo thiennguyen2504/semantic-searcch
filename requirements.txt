@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+asyncpg
+pgvector
+sentence-transformers
+pydantic
+python-dotenv
+kagglehub
+pandas
+beautifulsoup4
+tiktoken
+pytest
+httpx
