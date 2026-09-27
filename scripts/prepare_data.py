@@ -70,12 +70,21 @@ def main():
     len_filtered_count = len(df)
     print(f"      Rows remaining after length filter (>= 50 chars): {len_filtered_count}")
 
-    # Rename Title -> title
-    df = df.rename(columns={"Title": "title"})
-    df = df[["title", "content"]].reset_index(drop=True)
+    # Rename Title -> title, Id -> so_question_id
+    df = df.rename(columns={"Title": "title", "Id": "so_question_id"})
+    df["so_question_id"] = df["so_question_id"].astype(int)
+    df = df[["so_question_id", "title", "content"]].reset_index(drop=True)
+
+    # Verify so_question_id integrity
+    assert df["so_question_id"].isnull().sum() == 0, "Found null values in so_question_id!"
+    assert (df["so_question_id"] > 0).all(), "Found non-positive values in so_question_id!"
+
+    print("\n--- Sample rows after keeping so_question_id ---")
+    for i, row in df.head(3).iterrows():
+        print(f"Sample {i + 1}: so_question_id={row['so_question_id']} (type={type(row['so_question_id']).__name__}), title='{row['title'][:60]}...'")
 
     # Save full cleaned HQ dataset
-    print(f"[6/7] Saving full cleaned HQ dataset to '{full_output_path}'...")
+    print(f"\n[6/7] Saving full cleaned HQ dataset to '{full_output_path}'...")
     records_full = df.to_dict(orient="records")
     with open(full_output_path, "w", encoding="utf-8") as f:
         json.dump(records_full, f, ensure_ascii=False, indent=2)
@@ -89,6 +98,10 @@ def main():
     with open(dev_output_path, "w", encoding="utf-8") as f:
         json.dump(records_dev, f, ensure_ascii=False, indent=2)
     print(f"      Saved {len(records_dev)} documents to {dev_output_path}")
+
+    print("\n--- Sample dev rows ---")
+    for i, row in df_dev.head(3).iterrows():
+        print(f"Dev Sample {i + 1}: so_question_id={row['so_question_id']}, title='{row['title'][:60]}...'")
 
     print("\nData preparation completed successfully!")
     print(f"- Initial rows: {initial_count}")

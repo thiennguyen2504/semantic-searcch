@@ -51,7 +51,13 @@ async def run_seed(limit: int | None = None, clear: bool = False):
         content = doc.get("content", "")
         if not content.strip():
             continue
-        chunks_count = await insert_document(pool, title, content)
+        so_question_id = doc.get("so_question_id")
+        chunks_count = await insert_document(
+            pool,
+            title,
+            content,
+            so_question_id=so_question_id,
+        )
         total_chunks_inserted += chunks_count
 
     # Check total rows in the documents table

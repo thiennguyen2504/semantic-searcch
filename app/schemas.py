@@ -10,7 +10,7 @@ class HealthResponse(BaseModel):
 class DocumentIn(BaseModel):
     title: str = Field(..., description="Title of the parent document")
     content: str = Field(..., description="Full content of the document")
-
+    so_question_id: Optional[int] = Field(default=None, description="Optional Stack Overflow question ID")
 
 
 class DocumentOut(BaseModel):
@@ -23,6 +23,7 @@ class SearchResult(BaseModel):
     parent_title: str
     content: str
     similarity: float
+    url: Optional[str] = Field(default=None, description="Link to original question on Stack Overflow")
 
 
 # Legacy / alternative aliases for flexibility

@@ -67,7 +67,12 @@ async def create_document(doc: DocumentIn):
             detail="Database connection pool is not initialized."
         )
 
-    num_chunks = await insert_document(pool, doc.title.strip(), doc.content.strip())
+    num_chunks = await insert_document(
+        pool,
+        doc.title.strip(),
+        doc.content.strip(),
+        so_question_id=doc.so_question_id,
+    )
     document_id = str(uuid.uuid4())
 
     return DocumentOut(

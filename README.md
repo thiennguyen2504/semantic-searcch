@@ -40,6 +40,7 @@ Dự án **Semantic Search API** hoàn chỉnh kết hợp sức mạnh của **
 |   - chunk_index: INT                                                              |
 |   - content: TEXT                                                                 |
 |   - embedding: VECTOR(384)                                                        |
+|   - so_question_id: BIGINT (Stack Overflow Question ID)                          |
 |   - content_tsv: tsvector (Full-Text Search)                                      |
 |                                                                                   |
 |  Indexes:                                                                         |
@@ -64,11 +65,12 @@ semantic-search/
 │   ├── chunking.py        # Module chia nhỏ văn bản bằng tiktoken theo token
 │   └── search.py          # Logic insert document và truy vấn similarity pgvector
 ├── scripts/
-│   ├── prepare_data.py    # Download dataset Kaggle, làm sạch HTML và lọc dữ liệu
+│   ├── prepare_data.py    # Download dataset Kaggle, làm sạch HTML và lưu so_question_id
 │   ├── build_eval_set.py  # Tạo bộ 30 câu truy vấn đánh giá tiếng Anh
 │   ├── build_eval_set_vi.py # Tạo bộ 30 câu truy vấn đánh giá tiếng Việt song song
 │   ├── seed.py            # Nạp dữ liệu vào database (--limit, --clear)
 │   ├── reseed.py          # Xoá và nạp lại toàn bộ dữ liệu với embedding model mới
+│   ├── add_so_question_id_column.py      # Migration thêm và backfill cột so_question_id
 │   ├── experiment_chunking.py            # Experiment 1: Đánh giá chiến lược chunking
 │   ├── experiment_keyword_vs_semantic.py # Experiment 2: So sánh Keyword vs Semantic
 │   ├── experiment_index_latency.py       # Experiment 3: Benchmark latency HNSW
@@ -164,6 +166,38 @@ uvicorn app.main:app --reload
 
 - API Server: [http://localhost:8000](http://localhost:8000)
 - Interactive Swagger UI: [http://localhost:8000/docs](http://localhost:8000/docs)
+
+### 7. Minh họa API Search & Trả về Link Stack Overflow gốc
+
+Khi gửi truy vấn tìm kiếm tới `GET /search`:
+
+```bash
+curl -X GET "http://localhost:8000/search?q=how%20to%20restrict%20firebase%20api%20key&top_k=2"
+```
+
+Mỗi kết quả trả về sẽ có thêm trường **`url`** dẫn thẳng tới câu hỏi gốc trên Stack Overflow (`https://stackoverflow.com/questions/{so_question_id}`). Điều này giúp người dùng dễ dàng truy cập trực tiếp bài viết gốc để:
+- Xem toàn bộ ngữ cảnh, hình ảnh minh họa và mã nguồn chi tiết của bài đăng.
+- Tham khảo các câu trả lời khác và câu trả lời được chấp thuận (accepted answers) ngoài phần nội dung chunk được trích xuất.
+
+**Ví dụ JSON Response:**
+```json
+[
+  {
+    "id": 2,
+    "parent_title": "Restricting Firebase API Keys",
+    "content": " but it worked for the Android Key and the Server Key , at least as far as I can tell. However, the Browser Key restrictions appear to not work as Firebase is creating a new Browser Key when I redeploy my application. To sum up my question, I can see that Firebase is auto creating API keys for me, but I cannot find any documentation that talks about how these keys are used for the basic features of Firebase that I'm using. I'm also not entirely sure how I can restrict these keys, especially the Browser Key .",
+    "similarity": 0.7173,
+    "url": "https://stackoverflow.com/questions/51803372"
+  },
+  {
+    "id": 434,
+    "parent_title": "com.google.firebase.database.DatabaseException: Calls to setPersistenceEnabled() must be made before any other usage of FirebaseDatabase instance",
+    "content": "I am having a problem when I try to setPersistence in fIREBASE,can someone please explain on how to go about it...",
+    "similarity": 0.5649,
+    "url": "https://stackoverflow.com/questions/37753991"
+  }
+]
+```
 
 ---
 
@@ -301,9 +335,14 @@ Thực hiện kiểm thử trên bộ 30 câu hỏi song ngữ ([data/eval_queri
 
 Bạn có thể tự chạy lại từng thực nghiệm độc lập bằng các lệnh sau:
 
-### Re-seed dữ liệu với Model Đa ngôn ngữ
+### Re-seed dữ liệu với Model Đa ngôn ngữ (và so_question_id)
 ```bash
 python scripts/reseed.py
+```
+
+### Migration thêm cột so_question_id cho bảng hiện có (không cần re-seed)
+```bash
+python scripts/add_so_question_id_column.py
 ```
 
 ### Tạo bộ dữ liệu đánh giá Tiếng Việt song song

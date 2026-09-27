@@ -38,8 +38,10 @@ async def init_db() -> None:
                 parent_title TEXT,
                 chunk_index INT,
                 content TEXT,
-                embedding VECTOR(384)
+                embedding VECTOR(384),
+                so_question_id BIGINT
             );
+            ALTER TABLE documents ADD COLUMN IF NOT EXISTS so_question_id BIGINT;
             """
         )
         logger.info("Successfully ensured 'vector' extension and 'documents' table exist.")

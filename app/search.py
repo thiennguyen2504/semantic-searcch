@@ -6,7 +6,12 @@ from app.chunking import chunk_text
 from app.embedding import embed, embed_batch
 
 
-async def insert_document(pool: asyncpg.Pool, title: str, content: str) -> int:
+async def insert_document(
+    pool: asyncpg.Pool,
+    title: str,
+    content: str,
+    so_question_id: int | None = None,
+) -> int:
     """
     Chunk text, generate embeddings in batch, and insert each chunk into the documents table.
 
@@ -14,6 +19,7 @@ async def insert_document(pool: asyncpg.Pool, title: str, content: str) -> int:
         pool: asyncpg Connection Pool.
         title: Document title (used as parent_title).
         content: Document content.
+        so_question_id: Optional Stack Overflow question ID.
 
     Returns:
         int: Number of chunks inserted.
@@ -25,13 +31,13 @@ async def insert_document(pool: asyncpg.Pool, title: str, content: str) -> int:
     embeddings = embed_batch(chunks)
 
     records = [
-        (title, i, chunk, np.array(emb, dtype=np.float32))
+        (title, i, chunk, np.array(emb, dtype=np.float32), so_question_id)
         for i, (chunk, emb) in enumerate(zip(chunks, embeddings))
     ]
 
     query = """
-        INSERT INTO documents (parent_title, chunk_index, content, embedding)
-        VALUES ($1, $2, $3, $4);
+        INSERT INTO documents (parent_title, chunk_index, content, embedding, so_question_id)
+        VALUES ($1, $2, $3, $4, $5);
     """
     async with pool.acquire() as conn:
         await conn.executemany(query, records)
@@ -53,7 +59,7 @@ async def search_documents(
         top_k: Number of most similar results to return (default: 5).
 
     Returns:
-        List[Dict[str, Any]]: Search results with id, parent_title, content, and similarity score.
+        List[Dict[str, Any]]: Search results with id, parent_title, content, similarity, and url.
     """
     query_vector = np.array(embed(query), dtype=np.float32)
 
@@ -62,6 +68,7 @@ async def search_documents(
             id,
             parent_title,
             content,
+            so_question_id,
             1 - (embedding <=> $1) AS similarity
         FROM documents
         ORDER BY embedding <=> $1
@@ -70,12 +77,16 @@ async def search_documents(
     async with pool.acquire() as conn:
         rows = await conn.fetch(sql, query_vector, top_k)
 
-    return [
-        {
+    results = []
+    for row in rows:
+        so_id = row["so_question_id"]
+        url = f"https://stackoverflow.com/questions/{so_id}" if so_id is not None else None
+        results.append({
             "id": row["id"],
             "parent_title": row["parent_title"],
             "content": row["content"],
             "similarity": float(row["similarity"]),
-        }
-        for row in rows
-    ]
+            "url": url,
+        })
+
+    return results

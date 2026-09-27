@@ -61,4 +61,20 @@ def test_insert_and_search_flow():
         assert "parent_title" in first
         assert "content" in first
         assert "similarity" in first
+        assert "url" in first
         assert isinstance(first["similarity"], float)
+
+        # Test insertion with so_question_id
+        doc_with_id = {
+            "title": "Python Dictionary Comprehension",
+            "content": "Dictionary comprehensions in Python allow concise dictionary construction from sequences.",
+            "so_question_id": 99998888,
+        }
+        res_with_id = client.post("/documents", json=doc_with_id)
+        assert res_with_id.status_code == 201
+
+        res_search_id = client.get("/search?q=Python Dictionary Comprehension&top_k=1")
+        assert res_search_id.status_code == 200
+        first_id = res_search_id.json()[0]
+        assert first_id["url"] == "https://stackoverflow.com/questions/99998888"
+
