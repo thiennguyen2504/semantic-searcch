@@ -4,21 +4,34 @@ from pydantic import BaseModel, Field
 
 
 class HealthResponse(BaseModel):
-    status: str = Field(..., example="ok")
+    status: str = Field(..., examples=["ok"])
 
 
-class DocumentCreate(BaseModel):
-    parent_title: str
-    chunk_index: int = 0
-    content: str
+class DocumentIn(BaseModel):
+    title: str = Field(..., description="Title of the parent document")
+    content: str = Field(..., description="Full content of the document")
 
 
-class DocumentResponse(BaseModel):
+
+class DocumentOut(BaseModel):
+    document_id: str = Field(..., description="Identifier for the inserted document")
+    num_chunks: int = Field(..., description="Number of chunks created and stored")
+
+
+class SearchResult(BaseModel):
     id: int
-    parent_title: Optional[str] = None
-    chunk_index: Optional[int] = None
+    parent_title: str
     content: str
-    similarity_score: Optional[float] = None
+    similarity: float
+
+
+# Legacy / alternative aliases for flexibility
+class DocumentCreate(DocumentIn):
+    pass
+
+
+class DocumentResponse(SearchResult):
+    pass
 
 
 class SearchQuery(BaseModel):
@@ -28,4 +41,4 @@ class SearchQuery(BaseModel):
 
 class SearchResponse(BaseModel):
     query: str
-    results: List[DocumentResponse]
+    results: List[SearchResult]

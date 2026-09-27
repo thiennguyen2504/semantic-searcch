@@ -73,3 +73,9 @@ async def get_db() -> AsyncGenerator[asyncpg.Connection, None]:
         raise RuntimeError("Database pool has not been initialized. Call init_db() first.")
     async with pool.acquire() as connection:
         yield connection
+
+
+def get_pool() -> Optional[asyncpg.Pool]:
+    """Return the global asyncpg connection pool."""
+    return pool
+
