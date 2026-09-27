@@ -6,7 +6,7 @@ from sentence_transformers import SentenceTransformer
 
 load_dotenv()
 
-MODEL_NAME = os.getenv("EMBEDDING_MODEL_NAME", "all-MiniLM-L6-v2")
+MODEL_NAME = os.getenv("EMBEDDING_MODEL_NAME", "paraphrase-multilingual-MiniLM-L12-v2")
 
 # Load model once at module level
 model = SentenceTransformer(MODEL_NAME)

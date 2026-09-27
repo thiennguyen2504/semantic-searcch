@@ -1,0 +1,122 @@
+[
+  {
+    "query": "ImportError: libcudnn when running a TensorFlow program",
+    "expected_parent_title": "ImportError: libcudnn when running a TensorFlow program"
+  },
+  {
+    "query": "Push notification icon in Cordova Android",
+    "expected_parent_title": "Push notification icon in Cordova Android"
+  },
+  {
+    "query": "Get current filename in Babel Plugin?",
+    "expected_parent_title": "Get current filename in Babel Plugin?"
+  },
+  {
+    "query": "RxJava: How to convert List of objects to List of another objects",
+    "expected_parent_title": "RxJava: How to convert List of objects to List of another objects"
+  },
+  {
+    "query": "ClassNotFoundException: Didn't find class \"android.support.v4.content.FileProvider\" after androidx migration",
+    "expected_parent_title": "ClassNotFoundException: Didn't find class \"android.support.v4.content.FileProvider\" after androidx migration"
+  },
+  {
+    "query": "Can you declare a object literal type that allows unknown properties in typescript?",
+    "expected_parent_title": "Can you declare a object literal type that allows unknown properties in typescript?"
+  },
+  {
+    "query": "How do I check that a docker host is in swarm mode?",
+    "expected_parent_title": "How do I check that a docker host is in swarm mode?"
+  },
+  {
+    "query": "Can I detect element visibility using only CSS?",
+    "expected_parent_title": "Can I detect element visibility using only CSS?"
+  },
+  {
+    "query": "SAML Signing Certificate - Which SSL Certificate Type?",
+    "expected_parent_title": "SAML Signing Certificate - Which SSL Certificate Type?"
+  },
+  {
+    "query": "How to Disable Start Page After Solution Close in Visual Studio 2017",
+    "expected_parent_title": "How to Disable Start Page After Solution Close in Visual Studio 2017"
+  },
+  {
+    "query": "Creating a local notification in response to a push notification (from firebase) in cordova/ionic",
+    "expected_parent_title": "Creating a local notification in response to a push notification (from firebase) in cordova/ionic"
+  },
+  {
+    "query": "Upgrade Angular version (now: 2.4.3 or 4.0.0-beta.3) following the best practice?",
+    "expected_parent_title": "Upgrade Angular version (now: 2.4.3 or 4.0.0-beta.3) following the best practice?"
+  },
+  {
+    "query": "significance of \"trainable\" and \"training\" flag in tf.layers.batch_normalization",
+    "expected_parent_title": "significance of \"trainable\" and \"training\" flag in tf.layers.batch_normalization"
+  },
+  {
+    "query": "Get all HTML tags with Beautiful Soup",
+    "expected_parent_title": "Get all HTML tags with Beautiful Soup"
+  },
+  {
+    "query": "iOS 10: How to debug a Today Widget - \"Unable to load\" message",
+    "expected_parent_title": "iOS 10: How to debug a Today Widget - \"Unable to load\" message"
+  },
+  {
+    "query": "Ionic with Android Emulator: Automatically send location?",
+    "expected_parent_title": "Ionic with Android Emulator: Automatically send location?"
+  },
+  {
+    "query": "Which way to name a function in Go, CamelCase or Semi-CamelCase?",
+    "expected_parent_title": "Which way to name a function in Go, CamelCase or Semi-CamelCase?"
+  },
+  {
+    "query": "Firebase notifications not working in iOS 11",
+    "expected_parent_title": "Firebase notifications not working in iOS 11"
+  },
+  {
+    "query": "How to keep scroll position using flatlist when navigating back in react native ?",
+    "expected_parent_title": "How to keep scroll position using flatlist when navigating back in react native ?"
+  },
+  {
+    "query": "ReportLab: working with Chinese/Unicode characters",
+    "expected_parent_title": "ReportLab: working with Chinese/Unicode characters"
+  },
+  {
+    "query": "How do I flatten a tensor in pytorch?",
+    "expected_parent_title": "How do I flatten a tensor in pytorch?"
+  },
+  {
+    "query": "Python - Most elegant way to extract a substring, being given left and right borders",
+    "expected_parent_title": "Python - Most elegant way to extract a substring, being given left and right borders"
+  },
+  {
+    "query": "Type '() => void' is not assignable to type '() => {}'",
+    "expected_parent_title": "Type '() => void' is not assignable to type '() => {}'"
+  },
+  {
+    "query": "Duplicate GlobalKey detected in widget tree",
+    "expected_parent_title": "Duplicate GlobalKey detected in widget tree"
+  },
+  {
+    "query": "Python JSON dummy data generation from JSON schema",
+    "expected_parent_title": "Python JSON dummy data generation from JSON schema"
+  },
+  {
+    "query": "Running a Jupyter notebook from another notebook",
+    "expected_parent_title": "Running a Jupyter notebook from another notebook"
+  },
+  {
+    "query": "How do I use Reactor's StepVerifier to verify a Mono is empty?",
+    "expected_parent_title": "How do I use Reactor's StepVerifier to verify a Mono is empty?"
+  },
+  {
+    "query": "how to do code listing in Latex without line numbers (when using lstlisting environment)",
+    "expected_parent_title": "how to do code listing in Latex without line numbers (when using lstlisting environment)"
+  },
+  {
+    "query": "Sandbox subdomains are for test purposes only. Please add your own domain or add the address to authoriz",
+    "expected_parent_title": "Sandbox subdomains are for test purposes only. Please add your own domain or add the address to authoriz"
+  },
+  {
+    "query": "Databinding annotation processor kapt warning",
+    "expected_parent_title": "Databinding annotation processor kapt warning"
+  }
+]

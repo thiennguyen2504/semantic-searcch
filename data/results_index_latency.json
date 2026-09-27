@@ -1,0 +1,26 @@
+[
+  {
+    "doc_count": 5000,
+    "chunk_count": 6530,
+    "latency_no_index_ms": 18.78,
+    "latency_hnsw_ms": 1.31,
+    "speedup": 14.39,
+    "index_build_time_sec": 2.25
+  },
+  {
+    "doc_count": 10000,
+    "chunk_count": 13206,
+    "latency_no_index_ms": 27.23,
+    "latency_hnsw_ms": 2.2,
+    "speedup": 12.38,
+    "index_build_time_sec": 2.58
+  },
+  {
+    "doc_count": 14997,
+    "chunk_count": 20407,
+    "latency_no_index_ms": 41.93,
+    "latency_hnsw_ms": 1.55,
+    "speedup": 27.0,
+    "index_build_time_sec": 3.99
+  }
+]

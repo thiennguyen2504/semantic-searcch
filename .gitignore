@@ -12,6 +12,10 @@ ENV/
 # Data & Models cache
 data/*
 !data/.gitkeep
+!data/latency_chart.png
+!data/results_*.json
+!data/eval_queries.json
+!data/eval_queries_vi.json
 .cache/
 huggingface/
 

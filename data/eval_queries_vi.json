@@ -1,0 +1,122 @@
+[
+  {
+    "query": "Lỗi ImportError libcudnn khi chạy chương trình TensorFlow",
+    "expected_parent_title": "ImportError: libcudnn when running a TensorFlow program"
+  },
+  {
+    "query": "Cách đổi icon thông báo push notification trong Cordova Android",
+    "expected_parent_title": "Push notification icon in Cordova Android"
+  },
+  {
+    "query": "Lấy tên file hiện tại trong Babel Plugin như thế nào?",
+    "expected_parent_title": "Get current filename in Babel Plugin?"
+  },
+  {
+    "query": "RxJava: Cách chuyển đổi List object này sang List object khác",
+    "expected_parent_title": "RxJava: How to convert List of objects to List of another objects"
+  },
+  {
+    "query": "Lỗi ClassNotFoundException không tìm thấy class android.support.v4.content.FileProvider sau khi migrate sang androidx",
+    "expected_parent_title": "ClassNotFoundException: Didn't find class \"android.support.v4.content.FileProvider\" after androidx migration"
+  },
+  {
+    "query": "Có thể khai báo kiểu object literal cho phép thuộc tính không xác định trong typescript không?",
+    "expected_parent_title": "Can you declare a object literal type that allows unknown properties in typescript?"
+  },
+  {
+    "query": "Làm thế nào để kiểm tra docker host đang ở chế độ swarm mode?",
+    "expected_parent_title": "How do I check that a docker host is in swarm mode?"
+  },
+  {
+    "query": "Có thể nhận biết phần tử đang hiển thị hay ẩn chỉ bằng CSS không?",
+    "expected_parent_title": "Can I detect element visibility using only CSS?"
+  },
+  {
+    "query": "Chứng chỉ SAML Signing Certificate nên dùng loại SSL Certificate nào?",
+    "expected_parent_title": "SAML Signing Certificate - Which SSL Certificate Type?"
+  },
+  {
+    "query": "Cách tắt Start Page sau khi đóng Solution trong Visual Studio 2017",
+    "expected_parent_title": "How to Disable Start Page After Solution Close in Visual Studio 2017"
+  },
+  {
+    "query": "Tạo local notification khi nhận push notification từ firebase trong cordova/ionic",
+    "expected_parent_title": "Creating a local notification in response to a push notification (from firebase) in cordova/ionic"
+  },
+  {
+    "query": "Cách nâng cấp phiên bản Angular đúng chuẩn best practice?",
+    "expected_parent_title": "Upgrade Angular version (now: 2.4.3 or 4.0.0-beta.3) following the best practice?"
+  },
+  {
+    "query": "Ý nghĩa của flag trainable và training trong tf.layers.batch_normalization",
+    "expected_parent_title": "significance of \"trainable\" and \"training\" flag in tf.layers.batch_normalization"
+  },
+  {
+    "query": "Lấy tất cả các thẻ HTML bằng Beautiful Soup trong python",
+    "expected_parent_title": "Get all HTML tags with Beautiful Soup"
+  },
+  {
+    "query": "iOS 10: Cách debug Today Widget khi gặp thông báo Unable to load",
+    "expected_parent_title": "iOS 10: How to debug a Today Widget - \"Unable to load\" message"
+  },
+  {
+    "query": "Ionic chạy trên Android Emulator: Làm sao tự động gửi tọa độ vị trí location?",
+    "expected_parent_title": "Ionic with Android Emulator: Automatically send location?"
+  },
+  {
+    "query": "Quy tắc đặt tên hàm trong Go nên dùng CamelCase hay Semi-CamelCase?",
+    "expected_parent_title": "Which way to name a function in Go, CamelCase or Semi-CamelCase?"
+  },
+  {
+    "query": "Thông báo Firebase notification không hoạt động trên iOS 11",
+    "expected_parent_title": "Firebase notifications not working in iOS 11"
+  },
+  {
+    "query": "Cách giữ nguyên vị trí cuộn scroll position của FlatList khi back lại trang trong React Native?",
+    "expected_parent_title": "How to keep scroll position using flatlist when navigating back in react native ?"
+  },
+  {
+    "query": "ReportLab: cách hiển thị ký tự tiếng Trung hoặc Unicode trong PDF",
+    "expected_parent_title": "ReportLab: working with Chinese/Unicode characters"
+  },
+  {
+    "query": "Làm thế nào để làm phẳng flatten một tensor trong PyTorch?",
+    "expected_parent_title": "How do I flatten a tensor in pytorch?"
+  },
+  {
+    "query": "Python: Cách tốt nhất để trích xuất chuỗi con substring nằm giữa hai mốc ký tự trái phải",
+    "expected_parent_title": "Python - Most elegant way to extract a substring, being given left and right borders"
+  },
+  {
+    "query": "Lỗi Type '() => void' is not assignable to type '() => {}' trong TypeScript",
+    "expected_parent_title": "Type '() => void' is not assignable to type '() => {}'"
+  },
+  {
+    "query": "Lỗi phát hiện trùng lặp Duplicate GlobalKey trong widget tree của Flutter",
+    "expected_parent_title": "Duplicate GlobalKey detected in widget tree"
+  },
+  {
+    "query": "Tạo dữ liệu giả dummy data dạng JSON từ JSON schema trong Python",
+    "expected_parent_title": "Python JSON dummy data generation from JSON schema"
+  },
+  {
+    "query": "Cách chạy một Jupyter notebook từ một notebook khác",
+    "expected_parent_title": "Running a Jupyter notebook from another notebook"
+  },
+  {
+    "query": "Cách dùng StepVerifier của Reactor để kiểm tra một Mono rỗng?",
+    "expected_parent_title": "How do I use Reactor's StepVerifier to verify a Mono is empty?"
+  },
+  {
+    "query": "Cách chèn đoạn code trong LaTeX không hiện số dòng bằng môi trường lstlisting",
+    "expected_parent_title": "how to do code listing in Latex without line numbers (when using lstlisting environment)"
+  },
+  {
+    "query": "Thông báo lỗi Sandbox subdomains are for test purposes only trong Mailgun",
+    "expected_parent_title": "Sandbox subdomains are for test purposes only. Please add your own domain or add the address to authoriz"
+  },
+  {
+    "query": "Cảnh báo Databinding annotation processor khi build với kapt trong Android Kotlin",
+    "expected_parent_title": "Databinding annotation processor kapt warning"
+  }
+]

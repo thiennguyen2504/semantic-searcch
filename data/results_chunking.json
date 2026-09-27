@@ -1,0 +1,32 @@
+[
+  {
+    "chunk_size": 300,
+    "overlap": 50,
+    "config": "(300, 50)",
+    "table_name": "documents_c300_50",
+    "total_chunks": 4053,
+    "hits": 29,
+    "total_queries": 30,
+    "recall_at_5": 0.9667
+  },
+  {
+    "chunk_size": 500,
+    "overlap": 50,
+    "config": "(500, 50)",
+    "table_name": "documents_c500_50",
+    "total_chunks": 3373,
+    "hits": 29,
+    "total_queries": 30,
+    "recall_at_5": 0.9667
+  },
+  {
+    "chunk_size": 500,
+    "overlap": 100,
+    "config": "(500, 100)",
+    "table_name": "documents_c500_100",
+    "total_chunks": 3400,
+    "hits": 29,
+    "total_queries": 30,
+    "recall_at_5": 0.9667
+  }
+]

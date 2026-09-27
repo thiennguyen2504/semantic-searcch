@@ -1,0 +1,385 @@
+{
+  "metrics_verbatim": {
+    "total_queries": 30,
+    "keyword_hits": 30,
+    "keyword_recall_at_5": 1.0,
+    "semantic_hits": 29,
+    "semantic_recall_at_5": 0.9667
+  },
+  "metrics_semantic_challenge": {
+    "total_queries": 5,
+    "keyword_hits": 0,
+    "keyword_recall_at_5": 0.0,
+    "semantic_hits": 4,
+    "semantic_recall_at_5": 0.8
+  },
+  "semantic_wins_examples": [
+    {
+      "query": "CUDA deep learning GPU library loading failure in python",
+      "category": "Synonyms & Paraphrasing (CUDA/GPU vs libcudnn/TensorFlow)",
+      "expected_parent_title": "ImportError: libcudnn when running a TensorFlow program",
+      "semantic_hit": true,
+      "semantic_top3": [
+        "Ubuntu 16.04, CUDA 8 - CUDA driver version is insufficient for CUDA runtime version",
+        "How does Tensorflow support Cuda streams?",
+        "After building TensorFlow from source, seeing libcudart.so and libcudnn errors"
+      ],
+      "keyword_hit": false,
+      "keyword_top3": []
+    },
+    {
+      "query": "transform collection items into different model in reactive streams",
+      "category": "Conceptual query (reactive streams vs RxJava, transform vs convert)",
+      "expected_parent_title": "RxJava: How to convert List of objects to List of another objects",
+      "semantic_hit": true,
+      "semantic_top3": [
+        "RxJS 5, converting an observable to a BehaviorSubject(?)",
+        "Angular 2 Date deserialization",
+        "Rxjs One Observable Feeding into Another"
+      ],
+      "keyword_hit": false,
+      "keyword_top3": []
+    },
+    {
+      "query": "verify container cluster manager status from command line",
+      "category": "Vocabulary mismatch (cluster manager vs docker swarm mode)",
+      "expected_parent_title": "How do I check that a docker host is in swarm mode?",
+      "semantic_hit": true,
+      "semantic_top3": [
+        "How do I check that a docker host is in swarm mode?",
+        "How can I alert for container restarted?",
+        "How to view docker-compose healthcheck logs?"
+      ],
+      "keyword_hit": false,
+      "keyword_top3": []
+    },
+    {
+      "query": "missing android support library class during app startup after jetpack update",
+      "category": "Descriptive problem vs raw exception (app startup / jetpack vs androidx migration)",
+      "expected_parent_title": "ClassNotFoundException: Didn't find class \"android.support.v4.content.FileProvider\" after androidx migration",
+      "semantic_hit": false,
+      "semantic_top3": [
+        "Could not set unknown property 'useAndroidX' for object of type com.android.build.gradle.internal.dsl.BaseAppModuleExtension",
+        "Warning \"Kotlin plugin version is not the same as library version\" (but it is!)",
+        "java.lang.NoClassDefFoundError: Failed resolution of: Lorg/apache/commons/logging/LogFactory"
+      ],
+      "keyword_hit": false,
+      "keyword_top3": []
+    },
+    {
+      "query": "extract DOM elements tree using bs4 python parser",
+      "category": "Technical synonyms (DOM elements / bs4 vs HTML tags / Beautiful Soup)",
+      "expected_parent_title": "Get all HTML tags with Beautiful Soup",
+      "semantic_hit": true,
+      "semantic_top3": [
+        "Get all HTML tags with Beautiful Soup",
+        "Getting parent of AST node in Python",
+        "Using 'rvest' to extract links"
+      ],
+      "keyword_hit": false,
+      "keyword_top3": []
+    }
+  ],
+  "detailed_comparisons": [
+    {
+      "query": "ImportError: libcudnn when running a TensorFlow program",
+      "expected_parent_title": "ImportError: libcudnn when running a TensorFlow program",
+      "semantic_hit": true,
+      "semantic_top1": "ImportError: libcudnn when running a TensorFlow program",
+      "semantic_top1_score": 0.9049261269017398,
+      "keyword_hit": true,
+      "keyword_top1": "ImportError: libcudnn when running a TensorFlow program",
+      "keyword_top1_score": 0.8982298970222473
+    },
+    {
+      "query": "Push notification icon in Cordova Android",
+      "expected_parent_title": "Push notification icon in Cordova Android",
+      "semantic_hit": true,
+      "semantic_top1": "Push notification icon in Cordova Android",
+      "semantic_top1_score": 0.6712685227394104,
+      "keyword_hit": true,
+      "keyword_top1": "Push notification icon in Cordova Android",
+      "keyword_top1_score": 0.9275943636894226
+    },
+    {
+      "query": "Get current filename in Babel Plugin?",
+      "expected_parent_title": "Get current filename in Babel Plugin?",
+      "semantic_hit": true,
+      "semantic_top1": "Get current filename in Babel Plugin?",
+      "semantic_top1_score": 0.8508879035182072,
+      "keyword_hit": true,
+      "keyword_top1": "Get current filename in Babel Plugin?",
+      "keyword_top1_score": 0.8357239365577698
+    },
+    {
+      "query": "RxJava: How to convert List of objects to List of another objects",
+      "expected_parent_title": "RxJava: How to convert List of objects to List of another objects",
+      "semantic_hit": true,
+      "semantic_top1": "RxJava: How to convert List of objects to List of another objects",
+      "semantic_top1_score": 0.8104093799361065,
+      "keyword_hit": true,
+      "keyword_top1": "RxJava: How to convert List of objects to List of another objects",
+      "keyword_top1_score": 0.9185294508934021
+    },
+    {
+      "query": "ClassNotFoundException: Didn't find class \"android.support.v4.content.FileProvider\" after androidx migration",
+      "expected_parent_title": "ClassNotFoundException: Didn't find class \"android.support.v4.content.FileProvider\" after androidx migration",
+      "semantic_hit": true,
+      "semantic_top1": "ClassNotFoundException: Didn't find class \"android.support.v4.content.FileProvider\" after androidx migration",
+      "semantic_top1_score": 0.8291681016483244,
+      "keyword_hit": true,
+      "keyword_top1": "ClassNotFoundException: Didn't find class \"android.support.v4.content.FileProvider\" after androidx migration",
+      "keyword_top1_score": 0.9693632125854492
+    },
+    {
+      "query": "Can you declare a object literal type that allows unknown properties in typescript?",
+      "expected_parent_title": "Can you declare a object literal type that allows unknown properties in typescript?",
+      "semantic_hit": true,
+      "semantic_top1": "Can you declare a object literal type that allows unknown properties in typescript?",
+      "semantic_top1_score": 0.6479118466377304,
+      "keyword_hit": true,
+      "keyword_top1": "Can you declare a object literal type that allows unknown properties in typescript?",
+      "keyword_top1_score": 0.9646042585372925
+    },
+    {
+      "query": "How do I check that a docker host is in swarm mode?",
+      "expected_parent_title": "How do I check that a docker host is in swarm mode?",
+      "semantic_hit": true,
+      "semantic_top1": "How do I check that a docker host is in swarm mode?",
+      "semantic_top1_score": 0.751268208026886,
+      "keyword_hit": true,
+      "keyword_top1": "How do I check that a docker host is in swarm mode?",
+      "keyword_top1_score": 0.788510799407959
+    },
+    {
+      "query": "Can I detect element visibility using only CSS?",
+      "expected_parent_title": "Can I detect element visibility using only CSS?",
+      "semantic_hit": true,
+      "semantic_top1": "Can I detect element visibility using only CSS?",
+      "semantic_top1_score": 0.635411262512207,
+      "keyword_hit": true,
+      "keyword_top1": "Can I detect element visibility using only CSS?",
+      "keyword_top1_score": 0.6659311652183533
+    },
+    {
+      "query": "SAML Signing Certificate - Which SSL Certificate Type?",
+      "expected_parent_title": "SAML Signing Certificate - Which SSL Certificate Type?",
+      "semantic_hit": true,
+      "semantic_top1": "SAML Signing Certificate - Which SSL Certificate Type?",
+      "semantic_top1_score": 0.7728580236434937,
+      "keyword_hit": true,
+      "keyword_top1": "SAML Signing Certificate - Which SSL Certificate Type?",
+      "keyword_top1_score": 0.9551103711128235
+    },
+    {
+      "query": "How to Disable Start Page After Solution Close in Visual Studio 2017",
+      "expected_parent_title": "How to Disable Start Page After Solution Close in Visual Studio 2017",
+      "semantic_hit": true,
+      "semantic_top1": "How to Disable Start Page After Solution Close in Visual Studio 2017",
+      "semantic_top1_score": 0.788875294394775,
+      "keyword_hit": true,
+      "keyword_top1": "How to Disable Start Page After Solution Close in Visual Studio 2017",
+      "keyword_top1_score": 0.999600887298584
+    },
+    {
+      "query": "Creating a local notification in response to a push notification (from firebase) in cordova/ionic",
+      "expected_parent_title": "Creating a local notification in response to a push notification (from firebase) in cordova/ionic",
+      "semantic_hit": true,
+      "semantic_top1": "Creating a local notification in response to a push notification (from firebase) in cordova/ionic",
+      "semantic_top1_score": 0.6356153164827069,
+      "keyword_hit": true,
+      "keyword_top1": "Creating a local notification in response to a push notification (from firebase) in cordova/ionic",
+      "keyword_top1_score": 0.9796326160430908
+    },
+    {
+      "query": "Upgrade Angular version (now: 2.4.3 or 4.0.0-beta.3) following the best practice?",
+      "expected_parent_title": "Upgrade Angular version (now: 2.4.3 or 4.0.0-beta.3) following the best practice?",
+      "semantic_hit": true,
+      "semantic_top1": "Upgrade Angular version (now: 2.4.3 or 4.0.0-beta.3) following the best practice?",
+      "semantic_top1_score": 0.751483812839759,
+      "keyword_hit": true,
+      "keyword_top1": "Upgrade Angular version (now: 2.4.3 or 4.0.0-beta.3) following the best practice?",
+      "keyword_top1_score": 0.9979293942451477
+    },
+    {
+      "query": "significance of \"trainable\" and \"training\" flag in tf.layers.batch_normalization",
+      "expected_parent_title": "significance of \"trainable\" and \"training\" flag in tf.layers.batch_normalization",
+      "semantic_hit": true,
+      "semantic_top1": "significance of \"trainable\" and \"training\" flag in tf.layers.batch_normalization",
+      "semantic_top1_score": 0.9561032705183898,
+      "keyword_hit": true,
+      "keyword_top1": "significance of \"trainable\" and \"training\" flag in tf.layers.batch_normalization",
+      "keyword_top1_score": 0.9843854308128357
+    },
+    {
+      "query": "Get all HTML tags with Beautiful Soup",
+      "expected_parent_title": "Get all HTML tags with Beautiful Soup",
+      "semantic_hit": true,
+      "semantic_top1": "Get all HTML tags with Beautiful Soup",
+      "semantic_top1_score": 0.8136680833299125,
+      "keyword_hit": true,
+      "keyword_top1": "Get all HTML tags with Beautiful Soup",
+      "keyword_top1_score": 0.9295876622200012
+    },
+    {
+      "query": "iOS 10: How to debug a Today Widget - \"Unable to load\" message",
+      "expected_parent_title": "iOS 10: How to debug a Today Widget - \"Unable to load\" message",
+      "semantic_hit": true,
+      "semantic_top1": "iOS 10: How to debug a Today Widget - \"Unable to load\" message",
+      "semantic_top1_score": 0.8082437515258789,
+      "keyword_hit": true,
+      "keyword_top1": "iOS 10: How to debug a Today Widget - \"Unable to load\" message",
+      "keyword_top1_score": 0.9850047826766968
+    },
+    {
+      "query": "Ionic with Android Emulator: Automatically send location?",
+      "expected_parent_title": "Ionic with Android Emulator: Automatically send location?",
+      "semantic_hit": true,
+      "semantic_top1": "Ionic with Android Emulator: Automatically send location?",
+      "semantic_top1_score": 0.8562235321865376,
+      "keyword_hit": true,
+      "keyword_top1": "Ionic with Android Emulator: Automatically send location?",
+      "keyword_top1_score": 0.9501542448997498
+    },
+    {
+      "query": "Which way to name a function in Go, CamelCase or Semi-CamelCase?",
+      "expected_parent_title": "Which way to name a function in Go, CamelCase or Semi-CamelCase?",
+      "semantic_hit": true,
+      "semantic_top1": "Which way to name a function in Go, CamelCase or Semi-CamelCase?",
+      "semantic_top1_score": 0.6145530802544303,
+      "keyword_hit": true,
+      "keyword_top1": "Which way to name a function in Go, CamelCase or Semi-CamelCase?",
+      "keyword_top1_score": 0.9685185551643372
+    },
+    {
+      "query": "Firebase notifications not working in iOS 11",
+      "expected_parent_title": "Firebase notifications not working in iOS 11",
+      "semantic_hit": true,
+      "semantic_top1": "Firebase notifications not working in iOS 11",
+      "semantic_top1_score": 0.7815189156200455,
+      "keyword_hit": true,
+      "keyword_top1": "Firebase notifications not working in iOS 11",
+      "keyword_top1_score": 0.9373831152915955
+    },
+    {
+      "query": "How to keep scroll position using flatlist when navigating back in react native ?",
+      "expected_parent_title": "How to keep scroll position using flatlist when navigating back in react native ?",
+      "semantic_hit": true,
+      "semantic_top1": "How to keep scroll position using flatlist when navigating back in react native ?",
+      "semantic_top1_score": 0.9112151265144348,
+      "keyword_hit": true,
+      "keyword_top1": "How to keep scroll position using flatlist when navigating back in react native ?",
+      "keyword_top1_score": 0.9977413415908813
+    },
+    {
+      "query": "ReportLab: working with Chinese/Unicode characters",
+      "expected_parent_title": "ReportLab: working with Chinese/Unicode characters",
+      "semantic_hit": true,
+      "semantic_top1": "ReportLab: working with Chinese/Unicode characters",
+      "semantic_top1_score": 0.715578649571103,
+      "keyword_hit": true,
+      "keyword_top1": "ReportLab: working with Chinese/Unicode characters",
+      "keyword_top1_score": 0.5442723631858826
+    },
+    {
+      "query": "How do I flatten a tensor in pytorch?",
+      "expected_parent_title": "How do I flatten a tensor in pytorch?",
+      "semantic_hit": true,
+      "semantic_top1": "How do I flatten a tensor in pytorch?",
+      "semantic_top1_score": 0.7793779504669948,
+      "keyword_hit": true,
+      "keyword_top1": "How do I flatten a tensor in pytorch?",
+      "keyword_top1_score": 0.4679175615310669
+    },
+    {
+      "query": "Python - Most elegant way to extract a substring, being given left and right borders",
+      "expected_parent_title": "Python - Most elegant way to extract a substring, being given left and right borders",
+      "semantic_hit": true,
+      "semantic_top1": "Python - Most elegant way to extract a substring, being given left and right borders",
+      "semantic_top1_score": 0.6058182355273832,
+      "keyword_hit": true,
+      "keyword_top1": "Python - Most elegant way to extract a substring, being given left and right borders",
+      "keyword_top1_score": 0.9672286510467529
+    },
+    {
+      "query": "Type '() => void' is not assignable to type '() => {}'",
+      "expected_parent_title": "Type '() => void' is not assignable to type '() => {}'",
+      "semantic_hit": true,
+      "semantic_top1": "Type '() => void' is not assignable to type '() => {}'",
+      "semantic_top1_score": 0.5859450101852459,
+      "keyword_hit": true,
+      "keyword_top1": "Type '() => void' is not assignable to type '() => {}'",
+      "keyword_top1_score": 0.7409343719482422
+    },
+    {
+      "query": "Duplicate GlobalKey detected in widget tree",
+      "expected_parent_title": "Duplicate GlobalKey detected in widget tree",
+      "semantic_hit": true,
+      "semantic_top1": "Duplicate GlobalKey detected in widget tree",
+      "semantic_top1_score": 0.7482591571498975,
+      "keyword_hit": true,
+      "keyword_top1": "Duplicate GlobalKey detected in widget tree",
+      "keyword_top1_score": 0.9834679961204529
+    },
+    {
+      "query": "Python JSON dummy data generation from JSON schema",
+      "expected_parent_title": "Python JSON dummy data generation from JSON schema",
+      "semantic_hit": true,
+      "semantic_top1": "Python JSON dummy data generation from JSON schema",
+      "semantic_top1_score": 0.7922594075048337,
+      "keyword_hit": true,
+      "keyword_top1": "Python JSON dummy data generation from JSON schema",
+      "keyword_top1_score": 0.9761325120925903
+    },
+    {
+      "query": "Running a Jupyter notebook from another notebook",
+      "expected_parent_title": "Running a Jupyter notebook from another notebook",
+      "semantic_hit": false,
+      "semantic_top1": "How to create/modify a jupyter notebook from code (python)?",
+      "semantic_top1_score": 0.6843847036361694,
+      "keyword_hit": true,
+      "keyword_top1": "Running a Jupyter notebook from another notebook",
+      "keyword_top1_score": 0.7548022866249084
+    },
+    {
+      "query": "How do I use Reactor's StepVerifier to verify a Mono is empty?",
+      "expected_parent_title": "How do I use Reactor's StepVerifier to verify a Mono is empty?",
+      "semantic_hit": true,
+      "semantic_top1": "How do I use Reactor's StepVerifier to verify a Mono is empty?",
+      "semantic_top1_score": 0.6870715395126892,
+      "keyword_hit": true,
+      "keyword_top1": "How do I use Reactor's StepVerifier to verify a Mono is empty?",
+      "keyword_top1_score": 0.9001577496528625
+    },
+    {
+      "query": "how to do code listing in Latex without line numbers (when using lstlisting environment)",
+      "expected_parent_title": "how to do code listing in Latex without line numbers (when using lstlisting environment)",
+      "semantic_hit": true,
+      "semantic_top1": "how to do code listing in Latex without line numbers (when using lstlisting environment)",
+      "semantic_top1_score": 0.7393040657043457,
+      "keyword_hit": true,
+      "keyword_top1": "how to do code listing in Latex without line numbers (when using lstlisting environment)",
+      "keyword_top1_score": 0.9935031533241272
+    },
+    {
+      "query": "Sandbox subdomains are for test purposes only. Please add your own domain or add the address to authoriz",
+      "expected_parent_title": "Sandbox subdomains are for test purposes only. Please add your own domain or add the address to authoriz",
+      "semantic_hit": true,
+      "semantic_top1": "Sandbox subdomains are for test purposes only. Please add your own domain or add the address to authoriz",
+      "semantic_top1_score": 0.582890023840663,
+      "keyword_hit": true,
+      "keyword_top1": "Sandbox subdomains are for test purposes only. Please add your own domain or add the address to authoriz",
+      "keyword_top1_score": 0.9984078407287598
+    },
+    {
+      "query": "Databinding annotation processor kapt warning",
+      "expected_parent_title": "Databinding annotation processor kapt warning",
+      "semantic_hit": true,
+      "semantic_top1": "Databinding annotation processor kapt warning",
+      "semantic_top1_score": 0.7009584068109554,
+      "keyword_hit": true,
+      "keyword_top1": "Databinding annotation processor kapt warning",
+      "keyword_top1_score": 0.8181626796722412
+    }
+  ]
+}
